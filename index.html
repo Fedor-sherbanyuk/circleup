@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*body{*/
+        /*    overflow: hidden;*/
+        /*}*/
+        #root {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: flex-start;
+            align-items: flex-end;
+        }
+
+        .btn {
+            display: block;
+            margin: 100px auto;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(#007bff, blue, white);
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+            animation: jump 0.5s infinite alternate;
+        }
+
+        @keyframes jump {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(250px);
+            }
+        }
+
+        #root > div {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        video {
+            transform-origin: center center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vw;
+            z-index: -1;
+            object-fit: fill;
+        }
+
+        .finder_text {
+            background-image: linear-gradient(to top, blue 0%, darkturquoise 100%);
+            border: none;
+            height: 100px;
+            color: #ffffff;
+            font-weight: 700;
+            line-height: 12px;
+            text-align: center;
+            text-transform: uppercase;
+            font-style: normal;
+            letter-spacing: 0.4px;
+            text-decoration: none;
+            cursor: pointer;
+            padding: 20px 0px 20px 0;
+            font-size: 12px;
+            transition: all 0.3s ease 0s;
+            border-radius: 50%;
+        }
+
+        .finder_text:hover {
+            transform: rotateZ(360deg);
+            background-image: linear-gradient(to top, #00b4db 0%, #0083b0 100%);
+        }
+
+    </style>
+</head>
+<body>
+<div id="root"></div>
+<button id="play" class='draw-btn finder_text'>Draw circle</button>
+<script src="script.js"></script>
+</body>
+</html>
